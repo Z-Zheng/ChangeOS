@@ -11,7 +11,7 @@
 </div>
 
 
-This is an official implementation of ChangeOS in our RSE 2021 paper [Building damage assessment for rapid disaster response with a deep object-based semantic change detection framework: from natural disasters to man-made disasters](#).
+This is an official implementation of ChangeOS in our RSE 2021 paper [Building damage assessment for rapid disaster response with a deep object-based semantic change detection framework: from natural disasters to man-made disasters](https://www.sciencedirect.com/science/article/pii/S0034425721003564).
 
 
 ---------------------
