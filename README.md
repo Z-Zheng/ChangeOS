@@ -30,11 +30,11 @@ This is an official implementation of ChangeOS in our RSE 2021 paper [Building d
 ### Install EVER
 
 ```bash
-pip install --upgrade git+https://github.com/Z-Zheng/ever.git
+pip install ever-beta==0.2.3
 ```
 
 #### Requirements:
-- pytorch >= 1.7.0
+- pytorch >= 1.6.0
 - python >=3.6
 
 ### TBD
