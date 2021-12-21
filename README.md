@@ -27,17 +27,50 @@ This is an official implementation of ChangeOS in our RSE 2021 paper [Building d
 
 
 ## Getting Started
-### Install EVER
+### Installation
 
 ```bash
-pip install ever-beta==0.2.3
+pip install changeos
 ```
 
 #### Requirements:
-- pytorch >= 1.6.0
+- pytorch == 1.10.0
 - python >=3.6
+- skimage
+- Pillow
 
-### TBD
+### Usage
+
+```python
+# changeos has four APIs
+# (e.g., 'list_available_models', 'from_name', 'visualize', 'demo_data')
+import changeos
+
+
+# constructing ChangeOS model
+# support 'changeos_r18', 'changeos_r34', 'changeos_r50', 'changeos_r101'
+model = changeos.from_name('changeos_r101') # take 'changeos_r101' as example
+
+# load your data or our prepared demo data
+# numpy array of shape [1024, 1024, 3], [1024, 1024, 3]
+pre_disaster_image, post_disaster_image = changeos.demo_data()
+
+# model inference
+loc, dam = model(pre_disaster_image, post_disaster_image)
+
+# put color map on raw prediction
+loc, dam = changeos.visualize(loc, dam)
+
+# visualize by matplotlib
+import matplotlib.pyplot as plt
+plt.subplot(121)
+plt.imshow(loc)
+plt.subplot(122)
+plt.imshow(dam)
+plt.show()
+
+```
+
 
 
 ## <a name="Citation"></a>Citation
