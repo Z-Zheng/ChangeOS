@@ -11,12 +11,13 @@ from PIL import Image
 from urllib.parse import urlparse
 
 __all__ = ['from_name', 'list_available_models', 'visualize']
+V = 0.2
 
 AVAILABLE_MODELS = dict(
-    changeos_r18='https://github.com/Z-Zheng/ChangeOS/releases/download/v0.1/changeos_r18.pt',
-    changeos_r34='https://github.com/Z-Zheng/ChangeOS/releases/download/v0.1/changeos_r34.pt',
-    changeos_r50='https://github.com/Z-Zheng/ChangeOS/releases/download/v0.1/changeos_r50.pt',
-    changeos_r101='https://github.com/Z-Zheng/ChangeOS/releases/download/v0.1/changeos_r101.pt',
+    changeos_r18=f'https://github.com/Z-Zheng/ChangeOS/releases/download/v{V}/changeos_r18.pt',
+    changeos_r34=f'https://github.com/Z-Zheng/ChangeOS/releases/download/v{V}/changeos_r34.pt',
+    changeos_r50=f'https://github.com/Z-Zheng/ChangeOS/releases/download/v{V}/changeos_r50.pt',
+    changeos_r101=f'https://github.com/Z-Zheng/ChangeOS/releases/download/v{V}/changeos_r101.pt',
 )
 
 
@@ -124,6 +125,6 @@ def visualize(loc, dam):
 
 
 def demo_data():
-    pre = imread('https://github.com/Z-Zheng/ChangeOS/releases/download/v0.1/socal-fire_00000667_pre_disaster.png')
-    post = imread('https://github.com/Z-Zheng/ChangeOS/releases/download/v0.1/socal-fire_00000667_post_disaster.png')
+    pre = imread(f'https://github.com/Z-Zheng/ChangeOS/releases/download/v{V}/socal-fire_00000667_pre_disaster.png')
+    post = imread(f'https://github.com/Z-Zheng/ChangeOS/releases/download/v{V}/socal-fire_00000667_post_disaster.png')
     return pre, post
